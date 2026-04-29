@@ -37,6 +37,8 @@ class CreateDeliveryDTO extends DTO
 
     protected ?array $handshake_delivery;
 
+    protected ?string $scheduled_dropoff_time;
+
     public function getShipmentPromiseId(): string
     {
         return $this->shipment_promise_id;
@@ -95,5 +97,10 @@ class CreateDeliveryDTO extends DTO
     public function getHandshakeDelivery(): ?array
     {
         return $this->handshake_delivery;
+    }
+
+    public function getScheduledDropoffTime(): ?string
+    {
+        return $this->scheduled_dropoff_time;
     }
 }
