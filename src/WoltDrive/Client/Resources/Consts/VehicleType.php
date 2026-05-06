@@ -11,5 +11,6 @@ enum VehicleType: string
 {
     case CAR = 'car';
     case BICYCLE = 'bicycle';
+    case MOTORCYCLE = 'motorcycle';
     case WALKING = 'walking';
 }
