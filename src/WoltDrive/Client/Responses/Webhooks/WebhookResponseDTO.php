@@ -19,7 +19,7 @@ class WebhookResponseDTO extends WoltDriveResponseDTO
 
     protected ?bool $disabled;
 
-    protected array $subscriptions = [];
+    protected array $subscribed_events = [];
 
     public function getId(): ?string
     {
@@ -41,8 +41,8 @@ class WebhookResponseDTO extends WoltDriveResponseDTO
         return $this->disabled;
     }
 
-    public function getSubscriptions(): array
+    public function getSubscribedEvents(): array
     {
-        return $this->subscriptions;
+        return $this->subscribed_events;
     }
 }
