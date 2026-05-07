@@ -22,6 +22,14 @@ class WoltDriveWebhookVerifier
     /**
      * @throws WoltDriveWebhookVerificationException
      */
+    public function verify(array $payload): void
+    {
+        $this->verifyAndDecode($payload);
+    }
+
+    /**
+     * @throws WoltDriveWebhookVerificationException
+     */
     public function verifyAndDecodeOrderWebhook(array $payload): OrderWebhookPayloadDTO
     {
         $decodedPayload = $this->verifyAndDecode($payload);
