@@ -19,7 +19,7 @@ class UpdateWebhookDTO extends DTO
 
     protected ?bool $disabled;
 
-    protected array $subscriptions = [];
+    protected array $subscribed_events = [];
 
     public function getCallbackUrl(): ?string
     {
@@ -41,8 +41,8 @@ class UpdateWebhookDTO extends DTO
         return $this->disabled;
     }
 
-    public function getSubscriptions(): array
+    public function getSubscribedEvents(): array
     {
-        return $this->subscriptions;
+        return $this->subscribed_events;
     }
 }
