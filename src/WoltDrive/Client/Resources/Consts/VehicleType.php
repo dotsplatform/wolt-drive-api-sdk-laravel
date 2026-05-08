@@ -14,5 +14,6 @@ enum VehicleType: string
     case BICYCLE = 'bicycle';
     case MOTORCYCLE = 'motorcycle';
     case ELECTRIC_BICYCLE = 'electric_bicycle';
+    case ELECTRIC_SCOOTER = 'electric_scooter';
     case WALKING = 'walking';
 }
