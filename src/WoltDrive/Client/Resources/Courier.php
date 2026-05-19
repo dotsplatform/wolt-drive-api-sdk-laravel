@@ -14,7 +14,7 @@ class Courier extends DTO
 {
     protected ?int $id;
 
-    protected ?VehicleType $vehicle_type;
+    protected ?string $vehicle_type;
 
     public function getId(): ?int
     {
@@ -23,6 +23,10 @@ class Courier extends DTO
 
     public function getVehicleType(): ?VehicleType
     {
-        return $this->vehicle_type;
+        if (is_null($this->vehicle_type)) {
+            return null;
+        }
+
+        return VehicleType::fromString($this->vehicle_type);
     }
 }
